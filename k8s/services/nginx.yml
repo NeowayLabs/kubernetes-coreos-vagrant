@@ -6,7 +6,7 @@ metadata:
   name: nginx-service
 spec:
   deprecatedPublicIPs:
-    - 10.4.2.156
+    - 192.168.33.11
   ports:
     - port: 80 # the port that this service should serve on
       # the container on each pod to connect to, can be a name
