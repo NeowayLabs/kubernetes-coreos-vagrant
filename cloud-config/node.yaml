@@ -16,6 +16,8 @@ coreos:
     advertise-client-urls: http://0.0.0.0:2379,http://0.0.0.0:4001
     initial-cluster: master=http://192.168.33.10:2380
     proxy: on
+  flannel:
+    interface: $public_ipv4
   fleet:
     metadata: "role=node"
   units:
@@ -96,5 +98,5 @@ coreos:
         Restart=always
         RestartSec=10
   update:
-    group: alpha
+    group: stable
     reboot-strategy: off

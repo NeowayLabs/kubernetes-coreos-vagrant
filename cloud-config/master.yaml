@@ -28,6 +28,8 @@ coreos:
     initial-advertise-peer-urls: http://192.168.33.10:2380
     initial-cluster: master=http://192.168.33.10:2380
     initial-cluster-state: new
+  flannel:
+    interface: $public_ipv4
   fleet:
     metadata: "role=master"
   units:

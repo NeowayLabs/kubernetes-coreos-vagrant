@@ -19,7 +19,7 @@ Vagrant create [Kubernetes] Cluster on [Coreos], with one master and two nodes (
 
 #### Install [VirtualBox]
 
-### Install [Kubernetes]
+#### Install [Kubernetes]
 
 #### Clone this repo and:
 
