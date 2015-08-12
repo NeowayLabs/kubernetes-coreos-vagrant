@@ -33,7 +33,7 @@ Vagrant create [Kubernetes] Cluster on [Coreos], with one master and two nodes (
 
         kubectl -s http://192.168.33.10:8080 get nodes
         kubectl -s http://192.168.33.10:8080 -f k8s/rc/nginx.yaml
-        kubectl -s http://192.168.33.10:8080 -f k8s/services/nginx.yml
+        kubectl -s http://192.168.33.10:8080 -f k8s/svc/nginx.yml
 
         kubectl -s http://192.168.33.10:8080 get pods
         kubectl -s http://192.168.33.10:8080 get services
