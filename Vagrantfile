@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     master.vm.provision :shell, :inline => "mv /tmp/vagrantfile-user-data /var/lib/coreos-vagrant/", :privileged => true
   end
 
-  (1..(NODES.to_i + 1)).each do |i|
+  (1..(NODES.to_i)).each do |i|
     config.vm.define "node#{i}" do |node|
       node.vm.network "private_network", ip: "#{BASE_IP_ADDR}.#{i+10}"
       node.vm.provision :file, :source => "cloud-config/node.yaml", :destination => "/tmp/vagrantfile-user-data"
