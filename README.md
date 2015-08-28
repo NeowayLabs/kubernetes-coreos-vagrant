@@ -1,7 +1,7 @@
 Kubernetes on CoreOS with Vagrant
 =================================
 
-Vagrant create [Kubernetes] Cluster on [Coreos], with one master and two nodes (minions)
+Vagrant create [Kubernetes] Cluster on [Coreos], with one master and N nodes (minions)
 
 > **Master IP:** 192.168.33.10
 
