@@ -5,9 +5,11 @@ Vagrant create [Kubernetes] Cluster on [Coreos], with one master and two nodes (
 
 > **Master IP:** 192.168.33.10
 
-> **Node01 IP:** 192.168.33.11
+> **Node1 IP:** Master IP +1
 
-> **Node02 IP:** 192.168.33.12
+> **Node2 IP:** Master IP +2
+
+> **NodeN IP:** Master IP +n
 
 > **Flannel:** 10.244.0.0/16
 
@@ -32,8 +34,11 @@ Vagrant create [Kubernetes] Cluster on [Coreos], with one master and two nodes (
 #### Get nodes
 
         kubectl -s http://192.168.33.10:8080 get nodes
-        kubectl -s http://192.168.33.10:8080 -f k8s/rc/nginx.yaml
-        kubectl -s http://192.168.33.10:8080 -f k8s/svc/nginx.yml
+        kubectl -s http://192.168.33.10:8080 create -f k8s/rc/nginx.yaml
+        kubectl -s http://192.168.33.10:8080 create -f k8s/svc/nginx.yml
+
+        kubectl -s http://192.168.33.10:8080 create -f k8s/rc/kube-ui-rc.yaml
+        kubectl -s http://192.168.33.10:8080 create -f k8s/svc/kube-ui-svc.yaml
 
         kubectl -s http://192.168.33.10:8080 get pods
         kubectl -s http://192.168.33.10:8080 get services
